@@ -72,10 +72,14 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 # Env Setup for Web
 
-- Code editor (vscode)
-- Terminal setup
-- Node > 19.0
-- Github & git
+- [Code editor (vscode)](https://code.visualstudio.com/)
+- [Node > 19.0](https://nodejs.org/en/download)
+- [git](https://git-scm.com/downloads)
+- Terminal setup (Add node & git to your path)
+- Install [`http-server`](https://www.npmjs.com/package/http-server) globally
+  ```sh
+  npm install -g http-server
+  ```
 
 ---
 
@@ -150,6 +154,13 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 
+# Using tailiwind css
+
+- A framework with pre-defined css class for most of the UI scenarios
+- Install [tailwind css](https://tailwindcss.com/docs/installation/play-cdn)
+
+---
+
 # Enhance the basic example
 
 ### Let's create a list of users
@@ -164,6 +175,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 - It's a functional programming language
 - Any interactions done on website, is done using JS
+- Browser JS engine creates DOM (Document Object Model) for the page that is loaded
 
 ---
 
@@ -232,10 +244,7 @@ function greetPerson(name) {
 
 ---
 
-# DOM
-
-- Document Object Model (DOM)
-- Browser creates DOM for the page that is loaded
+# Event Listener
 
 Add a button with an event listener
 
