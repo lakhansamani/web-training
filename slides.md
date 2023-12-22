@@ -275,6 +275,19 @@ letters.forEach(function (letter) {
 });
 ```
 
+- Filtering array
+
+```js
+const filteredArr = letters.filter(function(letter) => {
+  if (letter === 'a' || letter === 'b') {
+    return true;
+  }
+  return false;
+})
+```
+
+---
+
 ## Exercise
 
 - Convert static list of user into array and render it
@@ -294,3 +307,123 @@ letters.forEach(function (letter) {
 
 - Add search input
 - On key up of search input filter the list and render it
+
+---
+
+# Closures
+
+A closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
+```js
+function init() {
+  var name = 'Mozilla'; // name is a local variable created by init
+  function displayName() {
+    // displayName() is the inner function, that forms the closure
+    console.log(name); // use variable declared in the parent function
+  }
+  displayName();
+}
+init();
+```
+
+---
+
+# Mutable
+
+In JavaScript, objects and arrays are mutable by default, but primitive values are not — once a primitive value is created, it cannot be changed, although the variable that holds it may be reassigned.
+
+# Javascript Modules
+
+Mechanisms of splitting JavaScript programs up into separate modules that can be imported when needed,
+Instead of importing large files
+
+Ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+
+---
+
+# export & import
+
+- The export declaration is used to export values from a JavaScript module.
+
+```js
+// named exports
+export const a = 'b';
+export let b = 'c';
+export function abc() {}
+// default exports
+// Can be one per module
+export default function () {}
+```
+
+- The import declaration is used to import read-only live bindings which are exported by another module.
+
+```js
+import { a } from 'x.js'; // named import
+import x from 'x.js'; // default import
+```
+
+---
+
+# Promise
+
+- Asynchronous operation
+- A Promise is in one of these states:
+
+pending: initial state, neither fulfilled nor rejected.
+fulfilled: meaning that the operation was completed successfully.
+rejected: meaning that the operation failed.
+
+```js
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('foo');
+  }, 300);
+});
+
+myPromise
+  .then((data) => {
+    console.log(`Hello ${data}`);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+```
+
+---
+
+# Using async / await instead of promises
+
+- It's a better syntax for using promises introduced in es6
+
+```js
+try {
+  const res = await myPromise();
+} catch (err) {
+  console.error(err);
+}
+```
+
+---
+
+# Fetch API
+
+- It provides global `fetch()` method to perform various HTTP requests asynchronously
+
+```js
+// Get list of feeds from api
+
+const res = await fetch(
+  `https://training-apis-production.up.railway.app/feed`,
+  {
+    method: 'GET',
+  }
+);
+const json = await res.json();
+```
+
+---
+
+# Exercise
+
+- Instead of static data, fetch feed from API and render it
+- Submit form

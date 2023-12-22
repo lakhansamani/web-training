@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Hello</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h1>Members</h1>
+    <form action="" id="add-user-form">
+      <input
+        type="text"
+        name="name"
+        id="add-member-name-input"
+        placeholder="Name of member"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        id="add-member-email-inpit"
+        placeholder="Email of member"
+        required
+      />
+      <button id="add-member" type="submit">Save</button>
+    </form>
+
+    <ul id="members"></ul>
+    <script src="./index.js"></script>
+  </body>
+</html>
