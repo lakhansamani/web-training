@@ -8,30 +8,34 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./app.css" />
   </head>
   <body>
     <nav>
       <a href="/enterprise.html">Enterprise</a>
     </nav>
-    <div class="flex flex-col">
-      <h1 class="text-blue-600 text-2xl">Home</h1>
-      <p class="txt">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-        voluptatibus, quibusdam, quia, quos voluptatem voluptatum quod
-        exercitationem quas voluptate quidem doloribus. Quisquam voluptatibus,
-        quibusdam, quia, quos voluptatem voluptatum quod exercitationem quas
-        voluptate quidem doloribus.
-      </p>
-    </div>
-    <div class="flex flex-row flex-wrap">
-      <div class="bg:white border rounded h-24 w-24">
-        <img
-          src="https://images.unsplash.com/photo-1598128558393-70ff21433be0?q=80&w=3378&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="insta0 image"
-          class="h-full w-full object-cover"
-        />
-      </div>
-    </div>
+    <h1>Members</h1>
+    <button id="greet-btn">Greet</button>
+    <br />
+    <!-- <input type="text" id="search-member" placeholder="Search member" /> -->
+    <form id="add-member-form">
+      <input
+        type="text"
+        id="member-name"
+        placeholder="Name"
+        name="name"
+        required
+      />
+      <input
+        type="email"
+        id="member-email"
+        placeholder="Email"
+        name="email"
+        required
+      />
+      <button id="add-member-button" type="submit">Add member</button>
+    </form>
+    <ul id="members-list"></ul>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

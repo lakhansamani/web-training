@@ -257,6 +257,8 @@ button.addEventListener('click', function () {
 });
 ```
 
+More events ref: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+
 </div>
 
 ---
@@ -331,6 +333,8 @@ init();
 # Mutable
 
 In JavaScript, objects and arrays are mutable by default, but primitive values are not — once a primitive value is created, it cannot be changed, although the variable that holds it may be reassigned.
+
+---
 
 # Javascript Modules
 
@@ -408,6 +412,7 @@ try {
 # Fetch API
 
 - It provides global `fetch()` method to perform various HTTP requests asynchronously
+- Ref: https://developer.mozilla.org/en-US/docs/Web/API/fetch
 
 ```js
 // Get list of feeds from api
